@@ -1,10 +1,10 @@
--- create table customer(
---     customer_id int not null,
---     customer_name varchar(50) not null, 
---     customer_email varchar(50) not null,
---     constraint pk_customer primary key(customer_id),
---     constraint validate_email check(customer_email like '%@%.com')
--- );
+create table customer(
+    customer_id int not null,
+    customer_name varchar(50) not null, 
+    customer_email varchar(50) not null,
+    constraint pk_customer primary key(customer_id),
+    constraint validate_email check(customer_email like '%@%.com')
+);
 
 
 -- create table warehouse(
