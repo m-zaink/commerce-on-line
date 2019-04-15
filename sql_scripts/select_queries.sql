@@ -9,7 +9,14 @@ where p.id=o.p_id and o.order_date < '2018'  ;
 
 select c.customer_name
 from customer c , seller_brands sb , sells s , orders o 
-where o.c_id = c.customer_id and sb.seller_id = s.s_id and o.p_id = s.p_id and sb.brand = 'abc' ; 
+where 
+    o.c_id = c.customer_id 
+    and 
+    sb.seller_id = s.s_id 
+    and 
+    o.p_id = s.p_id 
+    and
+    sb.brand = 'abc' ; 
 
 -- 3.What are the names of the customers who have bought products that cost the maximum to be stored in the warehouse.
 
@@ -50,8 +57,3 @@ select p.id , p.name
 from customer c , product p , orders o 
 where o.p_id = c.customer_id and o.p_id=p.id c.email='customer@gmail.com' ; 
 
-
--- 10.Write a procedure to display the list of all orders done in 2019
--- 11.Write a procedure to display all customers that have ordered items from our system.
--- 12.Write trigger to check that a product is not sent to a warehouse that doesn’t have enough capacity.
--- 13.Write a trigger to disallow storage of products in the warehouse that cost lesser than 10 rupees.
