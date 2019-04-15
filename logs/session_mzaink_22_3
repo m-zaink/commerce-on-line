@@ -1,0 +1,1448 @@
+Script started on 2019-03-22 14:13:57+0530
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ [H[2J]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ [H[2J]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysql -u sql12283387 -h sql12283387[K[K[K[K[K[K[K[K[K[K[Khttp://sql12.freemysqlhosting.net/[K -p http://sql12.freemysqlhostting.net/[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksql12283387 -{[KP 3306
+Enter password: 
+ERROR 2005 (HY000): Unknown MySQL server host 'http://sql12.freemysqlhosting.net' (2)
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ [H[2J]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysql - http://sql12.freemysqlhosting.net/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ku sql12283387 - [K [Kp [K[K[K-h http://sql12.freemysqlhosting.net/ - [KP 3306 -D sql12283387 -p
+Enter password: 
+ERROR 2005 (HY000): Unknown MySQL server host 'http://sql12.freemysqlhosting.net/' (2)
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysql -u sql12283387 -h http://sql12.freemysqlhosting.net/ -P 3306 -D sql12283387 -p[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Enter password: 
+ERROR 2005 (HY000): Unknown MySQL server host 'http://sql12.freemysqlhosting.net/' (2)
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ [H[2J]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysql -u sql12283387 -h http://sql12.freemysqlhosting.net/ -P 3306 -D sql12283387 -p[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmysql
+mysql                mysqlcheck           mysqldump            mysqlimport          mysqlrepair          mysqlslap            
+mysqladmin           mysql_config_editor  mysqldumpslow        mysqloptimize        mysqlreport          
+mysqlanalyze         mysqlconnect         mysql_embedded       mysqlpump            mysqlshow            
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysql
+mysql                mysqlcheck           mysqldump            mysqlimport          mysqlrepair          mysqlslap            
+mysqladmin           mysql_config_editor  mysqldumpslow        mysqloptimize        mysqlreport          
+mysqlanalyze         mysqlconnect         mysql_embedded       mysqlpump            mysqlshow            
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysql
+mysql                mysqlcheck           mysqldump            mysqlimport          mysqlrepair          mysqlslap            
+mysqladmin           mysql_config_editor  mysqldumpslow        mysqloptimize        mysqlreport          
+mysqlanalyze         mysqlconnect         mysql_embedded       mysqlpump            mysqlshow            
+]0;black-knight@napoleon: ~/Development/collab/database-open-ended[01;32mblack-knight@napoleon[00m:[01;34m~/Development/collab/database-open-ended[00m$ mysqlconnect 
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 51532050
+Server version: 5.5.58-0ubuntu0.14.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> [H[2Jmysql> conn[K[K[K[Ksele[K[K[K[K[H[2Jmysql> desc 
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> [H[2Jmysql> de[K[Kselect * [K[K[K[K[K[K[Kshow tables;
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.04 sec)
+
+mysql> des[K[K[Kdesc d[Kcut[Kstomer[K[K[K[K[K[K[K[K[K[K[K[Kdesc customer [H[2Jmysql> desc customer[K[K[K[K[K[K[K[K[K[K[K[Ks[Kdesc custoemr[K[Kmer[K[K[K[Kmer
+    -> ;
+; ^C^C -- Sorry, cannot connect to the server to kill query, giving up ...
+exit
+
+^C^C -- query aborted
+ERROR 1317 (70100): Query execution was interrupted
+mysql> [H[2Jmysql> ;desc customer[8Gshow tables;[K[8Gdesc customer;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| customer_id    | varchar(50) | NO   | PRI |         |       |
+| customer_name  | varchar(50) | NO   |     | NULL    |       |
+| customer_email | varchar(50) | NO   |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.05 sec)
+
+mysql> source /[7@mysql> [14G[K /home/black-knight/Downloads/tesg[Ktgen/testinput-0.txt
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insert into customer values ( 'bymky' , 'ovjli' , 'kewyzfwud@gmailncom' )
+insert' at line 2
+mysql> source /home/black-knight/Downloads/testgen/testinput-0.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kg/tte[K[Kestinput-0.txt
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+mysql> [H[2Jmysql> zele[K[K[K[Ksleec[K[K[Kel[K[K[Kelect * from l[Kcustomer;
++-------------+-----------------+---------------------------+
+| customer_id | customer_name   | customer_email            |
++-------------+-----------------+---------------------------+
+| aerlv       | mpgwr           | cgbkrpnqz@gmail.com       |
+| aomas       | rfmcc           | pvidatefohsto@gmail.com   |
+| armno       | anll            | ksgm@gmail.com            |
+| aswpd       | tlqvjcoypuiyqqg | llrqyqv@gmail.com         |
+| avtmx       | ilktlrtah       | mqqtxhuzmpinvcr@gmail.com |
+| bcmto       | wisr            | osmjfqtiirnma@gmail.com   |
+| blylh       | ipfjvacmynu     | ywztdaxsuvc@gmail.com     |
+| cgdyy       | xmjumu          | flfgmfrawo@gmail.com      |
+| cqgaa       | hpbnjxmthszxi   | yyigjmqpelxr@gmail.com    |
+| dfpwi       | oxwuwvc         | fjlzlh@gmail.com          |
+| drarf       | szddcga         | quftkzfb@gmail.com        |
+| eipxp       | hbdhquvdn       | asozievbyhspb@gmail.com   |
+| ezdin       | dpe             | vsmxdhqofzoj@gmail.com    |
+| fabaa       | czshyt          | tni@gmail.com             |
+| giyim       | gdwwxkyrkgxjdd  | ntmgywvqddxjjt@gmail.com  |
+| gkdzu       | nnvlnee         | lpxhm@gmail.com           |
+| gzpzr       | hzoukzaps       | afwatpibmwma@gmail.com    |
+| haccy       | yzxvq           | dextptyrtol@gmail.com     |
+| hhdya       | ymqbyzkgpf      | vsaf@gmail.com            |
+| hrrfh       | qlufgwaj        | ddjtqaxoe@gmail.com       |
+| hzcga       | spdyiempeerqs   | zneywuauvz@gmail.com      |
+| iajgq       | xvevxojwenxgku  | zbxsvxynkubbg@gmail.com   |
+| jpptl       | wabhpw          | lpbioukpvgxhamt@gmail.com |
+| jpxtq       | juafjau         | qopomdy@gmail.com         |
+| jwzhd       | bzvkwty         | yhkejsamemekv@gmail.com   |
+| kncvf       | gvvhnuxbaj      | ndwn@gmail.com            |
+| kpfhc       | uiegxrfjngacg   | jygdabhhjcqdrq@gmail.com  |
+| kvrii       | luzprvyafopio   | fxswxsv@gmail.com         |
+| lphfg       | csdzgqinwouhpgo | rlgmobbfh@gmail.com       |
+| lzgkc       | hbkaokmhdxvujsd | frk@gmail.com             |
+| ndnkq       | uyshqlzuobcprh  | aonofrgjbljuzne@gmail.com |
+| npaer       | zpnmieofdcembp  | vbbxxrfgpyh@gmail.com     |
+| pbhtb       | ryjcl           | pcgtilxkwzw@gmail.com     |
+| qtquw       | plxtprkwuapikau | yolht@gmail.com           |
+| qvfws       | ntsvgkkui       | hxljynjebg@gmail.com      |
+| rfsms       | cnwyjmg         | qyl@gmail.com             |
+| rjcja       | wcrmj           | xvveantzy@gmail.com       |
+| rsksg       | uzym            | zwgextysb@gmail.com       |
+| sjbif       | teqyzsaln       | mpifmaal@gmail.com        |
+| tfsbd       | aotnzhhlqx      | rbiprwhjth@gmail.com      |
+| uipbh       | bfyzgwby        | ooqgby@gmail.com          |
+| uxhly       | zhypwsjzgwi     | xalacbdxx@gmail.com       |
+| uynpi       | myfprjkf        | hvpqmcgeivuzjer@gmail.com |
+| vbuvk       | yetufyrlfnfydxe | puq@gmail.com             |
+| vqzvd       | qofcvmnbmyulvbw | fcreqxfesv@gmail.com      |
+| vtzna       | sbyuqncnixcxj   | uuzfhmaa@gmail.com        |
+| wqhuv       | qnpwjgeray      | mehmijzjmeimt@gmail.com   |
+| xobuj       | xqmkseogf       | kusspsmv@gmail.com        |
+| zkjgi       | wfvszlpxmou     | vlyeandqyduwt@gmail.com   |
+| zqewx       | ziegqsp         | iuy@gmail.com             |
++-------------+-----------------+---------------------------+
+50 rows in set (0.05 sec)
+
+mysql> 0mysql> select * from customer;[9Gource /home/black-knight/Downloads/tg/testinput-0.txt[9Gelect * from customer;[K
++-------------+-----------------+---------------------------+
+| customer_id | customer_name   | customer_email            |
++-------------+-----------------+---------------------------+
+| aerlv       | mpgwr           | cgbkrpnqz@gmail.com       |
+| aomas       | rfmcc           | pvidatefohsto@gmail.com   |
+| armno       | anll            | ksgm@gmail.com            |
+| aswpd       | tlqvjcoypuiyqqg | llrqyqv@gmail.com         |
+| avtmx       | ilktlrtah       | mqqtxhuzmpinvcr@gmail.com |
+| bcmto       | wisr            | osmjfqtiirnma@gmail.com   |
+| blylh       | ipfjvacmynu     | ywztdaxsuvc@gmail.com     |
+| cgdyy       | xmjumu          | flfgmfrawo@gmail.com      |
+| cqgaa       | hpbnjxmthszxi   | yyigjmqpelxr@gmail.com    |
+| dfpwi       | oxwuwvc         | fjlzlh@gmail.com          |
+| drarf       | szddcga         | quftkzfb@gmail.com        |
+| eipxp       | hbdhquvdn       | asozievbyhspb@gmail.com   |
+| ezdin       | dpe             | vsmxdhqofzoj@gmail.com    |
+| fabaa       | czshyt          | tni@gmail.com             |
+| giyim       | gdwwxkyrkgxjdd  | ntmgywvqddxjjt@gmail.com  |
+| gkdzu       | nnvlnee         | lpxhm@gmail.com           |
+| gzpzr       | hzoukzaps       | afwatpibmwma@gmail.com    |
+| haccy       | yzxvq           | dextptyrtol@gmail.com     |
+| hhdya       | ymqbyzkgpf      | vsaf@gmail.com            |
+| hrrfh       | qlufgwaj        | ddjtqaxoe@gmail.com       |
+| hzcga       | spdyiempeerqs   | zneywuauvz@gmail.com      |
+| iajgq       | xvevxojwenxgku  | zbxsvxynkubbg@gmail.com   |
+| jpptl       | wabhpw          | lpbioukpvgxhamt@gmail.com |
+| jpxtq       | juafjau         | qopomdy@gmail.com         |
+| jwzhd       | bzvkwty         | yhkejsamemekv@gmail.com   |
+| kncvf       | gvvhnuxbaj      | ndwn@gmail.com            |
+| kpfhc       | uiegxrfjngacg   | jygdabhhjcqdrq@gmail.com  |
+| kvrii       | luzprvyafopio   | fxswxsv@gmail.com         |
+| lphfg       | csdzgqinwouhpgo | rlgmobbfh@gmail.com       |
+| lzgkc       | hbkaokmhdxvujsd | frk@gmail.com             |
+| ndnkq       | uyshqlzuobcprh  | aonofrgjbljuzne@gmail.com |
+| npaer       | zpnmieofdcembp  | vbbxxrfgpyh@gmail.com     |
+| pbhtb       | ryjcl           | pcgtilxkwzw@gmail.com     |
+| qtquw       | plxtprkwuapikau | yolht@gmail.com           |
+| qvfws       | ntsvgkkui       | hxljynjebg@gmail.com      |
+| rfsms       | cnwyjmg         | qyl@gmail.com             |
+| rjcja       | wcrmj           | xvveantzy@gmail.com       |
+| rsksg       | uzym            | zwgextysb@gmail.com       |
+| sjbif       | teqyzsaln       | mpifmaal@gmail.com        |
+| tfsbd       | aotnzhhlqx      | rbiprwhjth@gmail.com      |
+| uipbh       | bfyzgwby        | ooqgby@gmail.com          |
+| uxhly       | zhypwsjzgwi     | xalacbdxx@gmail.com       |
+| uynpi       | myfprjkf        | hvpqmcgeivuzjer@gmail.com |
+| vbuvk       | yetufyrlfnfydxe | puq@gmail.com             |
+| vqzvd       | qofcvmnbmyulvbw | fcreqxfesv@gmail.com      |
+| vtzna       | sbyuqncnixcxj   | uuzfhmaa@gmail.com        |
+| wqhuv       | qnpwjgeray      | mehmijzjmeimt@gmail.com   |
+| xobuj       | xqmkseogf       | kusspsmv@gmail.com        |
+| zkjgi       | wfvszlpxmou     | vlyeandqyduwt@gmail.com   |
+| zqewx       | ziegqsp         | iuy@gmail.com             |
++-------------+-----------------+---------------------------+
+50 rows in set (0.08 sec)
+
+mysql> select * from customer;[8G[Kselect * from customer;[8G[Kselect * from customer;[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ks[Kdesc dp[K[Kprodcut ; 
+ERROR 1146 (42S02): Table 'sql12283387.prodcut' doesn't exist
+mysql> desc product ;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| product_id   | varchar(20) | NO   | PRI |         |       |
+| product_name | varchar(20) | YES  |     | NULL    |       |
+| product_type | varchar(20) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+mysql> [H[2Jmysql> insert into product values ( 'fousp' , 'ambqs' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'cemjv' , 'timcx' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'vtqhl' , 'pkjvk' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'djqif' , 'zdylv' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'olgyg' , 'jxczs' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'mstsg' , 'rfvgo' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'gmhdu' , 'xjqvu' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'mhkih' , 'fydrg' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'gwhxw' , 'mjenr' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'vhhlq' , 'mdowy' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'ifuou' , 'iakrz' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'yndwr' , 'fdxha' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'gcuag' , 'ywxgt' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'eezhx' , 'tupvs' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'cphfb' , 'sivix' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'vlhas' , 'twpzu' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'rutlr' , 'bzkfz' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'rwvir' , 'vgdlw' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'zvgty' , 'dsgqg' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'hmycz' , 'tpjdp' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> 
+mysql> 
+mysql> 
+mysql> [H[2Jmysql> slsec[K[K[Kele[K[K[K[Keel[K[Klect * fro m product
+    -> ;
++------------+--------------+--------------+
+| product_id | product_name | product_type |
++------------+--------------+--------------+
+| cemjv      | timcx        | not-fragile  |
+| cphfb      | sivix        | fragile      |
+| djqif      | zdylv        | not-fragile  |
+| eezhx      | tupvs        | not-fragile  |
+| fousp      | ambqs        | fragile      |
+| gcuag      | ywxgt        | fragile      |
+| gmhdu      | xjqvu        | not-fragile  |
+| gwhxw      | mjenr        | not-fragile  |
+| hmycz      | tpjdp        | not-fragile  |
+| ifuou      | iakrz        | fragile      |
+| mhkih      | fydrg        | fragile      |
+| mstsg      | rfvgo        | fragile      |
+| olgyg      | jxczs        | fragile      |
+| rutlr      | bzkfz        | not-fragile  |
+| rwvir      | vgdlw        | not-fragile  |
+| vhhlq      | mdowy        | not-fragile  |
+| vlhas      | twpzu        | not-fragile  |
+| vtqhl      | pkjvk        | fragile      |
+| yndwr      | fdxha        | not-fragile  |
+| zvgty      | dsgqg        | fragile      |
++------------+--------------+--------------+
+20 rows in set (0.10 sec)
+
+mysql> [H[2Jmysql> insert into ta[K[Kproduct(1[K2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kinsert into product values ( 'brscl' , 'jqvli' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'vjtvg' , 'gfkme' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'iwwik' , 'vtwta' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'albzs' , 'rjqnx' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'efjkz' , 'veeie' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'cvihg' , 'chjgw' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'gtpxr' , 'kywju' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'srecf' , 'ancpa' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'jclnm' , 'emeon' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'akswt' , 'gfadg' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'oxpoo' , 'ynwqb' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'xomuz' , 'bjaky' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'vhita' , 'uuphm' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'inqlc' , 'nfaob' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'wjmfj' , 'femrh' , 'not-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'hvimq' , 'upzlw' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'enrrh' , 'jyjfb' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values ( 'tpbhb' , 'rderm' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'mezoc' , 'jhjjk' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values ( 'rdspa' , 'ykdqs' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> [H[2Jmysql> select ( fr[K[K[K* from product;
++------------+--------------+--------------+
+| product_id | product_name | product_type |
++------------+--------------+--------------+
+| akswt      | gfadg        | not-fragile  |
+| albzs      | rjqnx        | not-fragile  |
+| brscl      | jqvli        | not-fragile  |
+| cemjv      | timcx        | not-fragile  |
+| cphfb      | sivix        | fragile      |
+| cvihg      | chjgw        | not-fragile  |
+| djqif      | zdylv        | not-fragile  |
+| eezhx      | tupvs        | not-fragile  |
+| efjkz      | veeie        | fragile      |
+| enrrh      | jyjfb        | fragile      |
+| fousp      | ambqs        | fragile      |
+| gcuag      | ywxgt        | fragile      |
+| gmhdu      | xjqvu        | not-fragile  |
+| gtpxr      | kywju        | not-fragile  |
+| gwhxw      | mjenr        | not-fragile  |
+| hmycz      | tpjdp        | not-fragile  |
+| hvimq      | upzlw        | fragile      |
+| ifuou      | iakrz        | fragile      |
+| inqlc      | nfaob        | fragile      |
+| iwwik      | vtwta        | fragile      |
+| jclnm      | emeon        | fragile      |
+| mezoc      | jhjjk        | fragile      |
+| mhkih      | fydrg        | fragile      |
+| mstsg      | rfvgo        | fragile      |
+| olgyg      | jxczs        | fragile      |
+| oxpoo      | ynwqb        | fragile      |
+| rdspa      | ykdqs        | fragile      |
+| rutlr      | bzkfz        | not-fragile  |
+| rwvir      | vgdlw        | not-fragile  |
+| srecf      | ancpa        | not-fragile  |
+| tpbhb      | rderm        | fragile      |
+| vhhlq      | mdowy        | not-fragile  |
+| vhita      | uuphm        | not-fragile  |
+| vjtvg      | gfkme        | fragile      |
+| vlhas      | twpzu        | not-fragile  |
+| vtqhl      | pkjvk        | fragile      |
+| wjmfj      | femrh        | not-fragile  |
+| xomuz      | bjaky        | fragile      |
+| yndwr      | fdxha        | not-fragile  |
+| zvgty      | dsgqg        | fragile      |
++------------+--------------+--------------+
+40 rows in set (0.04 sec)
+
+mysql> [H[2Jmysql> select * from product;
++------------+--------------+--------------+
+| product_id | product_name | product_type |
++------------+--------------+--------------+
+| akswt      | gfadg        | not-fragile  |
+| albzs      | rjqnx        | not-fragile  |
+| brscl      | jqvli        | not-fragile  |
+| cemjv      | timcx        | not-fragile  |
+| cphfb      | sivix        | fragile      |
+| cvihg      | chjgw        | not-fragile  |
+| djqif      | zdylv        | not-fragile  |
+| eezhx      | tupvs        | not-fragile  |
+| efjkz      | veeie        | fragile      |
+| enrrh      | jyjfb        | fragile      |
+| fousp      | ambqs        | fragile      |
+| gcuag      | ywxgt        | fragile      |
+| gmhdu      | xjqvu        | not-fragile  |
+| gtpxr      | kywju        | not-fragile  |
+| gwhxw      | mjenr        | not-fragile  |
+| hmycz      | tpjdp        | not-fragile  |
+| hvimq      | upzlw        | fragile      |
+| ifuou      | iakrz        | fragile      |
+| inqlc      | nfaob        | fragile      |
+| iwwik      | vtwta        | fragile      |
+| jclnm      | emeon        | fragile      |
+| mezoc      | jhjjk        | fragile      |
+| mhkih      | fydrg        | fragile      |
+| mstsg      | rfvgo        | fragile      |
+| olgyg      | jxczs        | fragile      |
+| oxpoo      | ynwqb        | fragile      |
+| rdspa      | ykdqs        | fragile      |
+| rutlr      | bzkfz        | not-fragile  |
+| rwvir      | vgdlw        | not-fragile  |
+| srecf      | ancpa        | not-fragile  |
+| tpbhb      | rderm        | fragile      |
+| vhhlq      | mdowy        | not-fragile  |
+| vhita      | uuphm        | not-fragile  |
+| vjtvg      | gfkme        | fragile      |
+| vlhas      | twpzu        | not-fragile  |
+| vtqhl      | pkjvk        | fragile      |
+| wjmfj      | femrh        | not-fragile  |
+| xomuz      | bjaky        | fragile      |
+| yndwr      | fdxha        | not-fragile  |
+| zvgty      | dsgqg        | fragile      |
++------------+--------------+--------------+
+40 rows in set (0.04 sec)
+
+mysql> [H[2Jmysql> select * from product;[8Ginsert into product values ( 'rdspa' , 'ykdqs' , 'fragile' ) ;[38Gmezoc' , 'jhjjk[70G[38Grdspa' , 'ykdqs[70G[8Gselect * from product;[K[8G[Kselect * from product;
++------------+--------------+--------------+
+| product_id | product_name | product_type |
++------------+--------------+--------------+
+| akswt      | gfadg        | not-fragile  |
+| albzs      | rjqnx        | not-fragile  |
+| brscl      | jqvli        | not-fragile  |
+| cemjv      | timcx        | not-fragile  |
+| cphfb      | sivix        | fragile      |
+| cvihg      | chjgw        | not-fragile  |
+| djqif      | zdylv        | not-fragile  |
+| eezhx      | tupvs        | not-fragile  |
+| efjkz      | veeie        | fragile      |
+| enrrh      | jyjfb        | fragile      |
+| fousp      | ambqs        | fragile      |
+| gcuag      | ywxgt        | fragile      |
+| gmhdu      | xjqvu        | not-fragile  |
+| gtpxr      | kywju        | not-fragile  |
+| gwhxw      | mjenr        | not-fragile  |
+| hmycz      | tpjdp        | not-fragile  |
+| hvimq      | upzlw        | fragile      |
+| ifuou      | iakrz        | fragile      |
+| inqlc      | nfaob        | fragile      |
+| iwwik      | vtwta        | fragile      |
+| jclnm      | emeon        | fragile      |
+| mezoc      | jhjjk        | fragile      |
+| mhkih      | fydrg        | fragile      |
+| mstsg      | rfvgo        | fragile      |
+| olgyg      | jxczs        | fragile      |
+| oxpoo      | ynwqb        | fragile      |
+| rdspa      | ykdqs        | fragile      |
+| rutlr      | bzkfz        | not-fragile  |
+| rwvir      | vgdlw        | not-fragile  |
+| srecf      | ancpa        | not-fragile  |
+| tpbhb      | rderm        | fragile      |
+| vhhlq      | mdowy        | not-fragile  |
+| vhita      | uuphm        | not-fragile  |
+| vjtvg      | gfkme        | fragile      |
+| vlhas      | twpzu        | not-fragile  |
+| vtqhl      | pkjvk        | fragile      |
+| wjmfj      | femrh        | not-fragile  |
+| xomuz      | bjaky        | fragile      |
+| yndwr      | fdxha        | not-fragile  |
+| zvgty      | dsgqg        | fragile      |
++------------+--------------+--------------+
+40 rows in set (0.04 sec)
+
+mysql> select * from product;[8G[Kselect * from product;[8Ginsert into product values ( 'rdspa' , 'ykdqs' , 'fragile' ) ;[8Gselect * from product;[K[8G[K[H[2Jmysql> sele[K[K[K[Kshow tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> desc warehouse ; 
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| warehouse_id   | varchar(50) | NO   | PRI | NULL    |       |
+| warehouse_name | varchar(50) | NO   |     | NULL    |       |
+| capacity       | int(11)     | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+mysql> [H[2Jmysql> ls[K[Kjse[K[K[Kdesc [Kwh[K[K[K[Kshow tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> desc h[Kwarehouse[K[K[K[K[K[K[K[K[K warehouse
+    -> ; 
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| warehouse_id   | varchar(50) | NO   | PRI | NULL    |       |
+| warehouse_name | varchar(50) | NO   |     | NULL    |       |
+| capacity       | int(11)     | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+mysql> [H[2Jmysql> insert into warehouse ( 'esmgf' , 'ukpztf' , 76 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''esmgf' , 'ukpztf' , 76 )' at line 1
+mysql> insert into warehouse ( 'rxskb' , 'axrpe' , 65 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''rxskb' , 'axrpe' , 65 )' at line 1
+mysql> insert into warehouse ( 'cnxqo' , 'ovrxqv' , 23 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''cnxqo' , 'ovrxqv' , 23 )' at line 1
+mysql> insert into warehouse ( 'xogqt' , 'vtcsv' , 79 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''xogqt' , 'vtcsv' , 79 )' at line 1
+mysql> insert into warehouse ( 'eomqu' , 'ihwcfk' , 44 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''eomqu' , 'ihwcfk' , 44 )' at line 1
+mysql> insert into warehouse ( 'ceozs' , 'jeiuek' , 83 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''ceozs' , 'jeiuek' , 83 )' at line 1
+mysql> insert into warehouse ( 'criyc' , 'guqfg' , 92 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''criyc' , 'guqfg' , 92 )' at line 1
+mysql> insert into warehouse ( 'sqlrt' , 'jjxvwa' , 82 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''sqlrt' , 'jjxvwa' , 82 )' at line 1
+mysql> insert into warehouse ( 'noxvt' , 'bnxak' , 73 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''noxvt' , 'bnxak' , 73 )' at line 1
+mysql> insert into warehouse ( 'geyau' , 'bydzp' , 26 ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''geyau' , 'bydzp' , 26 )' at line 1
+mysql> 
+mysql> [H[2Jmysql> insert into warehouse values( 'jppwh' , 'oryqoub' , 32 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'tzewx' , 'ganwfk' , 73 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'spwal' , 'bguew' , 33 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'byjyb' , 'wfyfztp' , 32 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'jtydd' , 'zpylcuk' , 67 ) ;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into warehouse values( 'izgaw' , 'hcuqrw' , 69 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into warehouse values( 'pqciv' , 'vxoffa' , 87 ) ;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into warehouse values( 'moanq' , 'nzrlkm' , 88 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'ldbbg' , 'rdelzmm' , 28 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'htbuw' , 'yhkczww' , 17 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 'htbuw' , 'yhkczww' , 17 ) ;
+ERROR 1062 (23000): Duplicate entry 'htbuw' for key 'PRIMARY'
+mysql> [H[2Jmysql> show tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.04 sec)
+
+mysql> selecgt * [K[K[Kt * [K[K[K[K[K[K[Kselect 8 f[K[K* from customer ; 
++-------------+-----------------+---------------------------+
+| customer_id | customer_name   | customer_email            |
++-------------+-----------------+---------------------------+
+| aerlv       | mpgwr           | cgbkrpnqz@gmail.com       |
+| aomas       | rfmcc           | pvidatefohsto@gmail.com   |
+| armno       | anll            | ksgm@gmail.com            |
+| aswpd       | tlqvjcoypuiyqqg | llrqyqv@gmail.com         |
+| avtmx       | ilktlrtah       | mqqtxhuzmpinvcr@gmail.com |
+| bcmto       | wisr            | osmjfqtiirnma@gmail.com   |
+| blylh       | ipfjvacmynu     | ywztdaxsuvc@gmail.com     |
+| cgdyy       | xmjumu          | flfgmfrawo@gmail.com      |
+| cqgaa       | hpbnjxmthszxi   | yyigjmqpelxr@gmail.com    |
+| dfpwi       | oxwuwvc         | fjlzlh@gmail.com          |
+| drarf       | szddcga         | quftkzfb@gmail.com        |
+| eipxp       | hbdhquvdn       | asozievbyhspb@gmail.com   |
+| ezdin       | dpe             | vsmxdhqofzoj@gmail.com    |
+| fabaa       | czshyt          | tni@gmail.com             |
+| giyim       | gdwwxkyrkgxjdd  | ntmgywvqddxjjt@gmail.com  |
+| gkdzu       | nnvlnee         | lpxhm@gmail.com           |
+| gzpzr       | hzoukzaps       | afwatpibmwma@gmail.com    |
+| haccy       | yzxvq           | dextptyrtol@gmail.com     |
+| hhdya       | ymqbyzkgpf      | vsaf@gmail.com            |
+| hrrfh       | qlufgwaj        | ddjtqaxoe@gmail.com       |
+| hzcga       | spdyiempeerqs   | zneywuauvz@gmail.com      |
+| iajgq       | xvevxojwenxgku  | zbxsvxynkubbg@gmail.com   |
+| jpptl       | wabhpw          | lpbioukpvgxhamt@gmail.com |
+| jpxtq       | juafjau         | qopomdy@gmail.com         |
+| jwzhd       | bzvkwty         | yhkejsamemekv@gmail.com   |
+| kncvf       | gvvhnuxbaj      | ndwn@gmail.com            |
+| kpfhc       | uiegxrfjngacg   | jygdabhhjcqdrq@gmail.com  |
+| kvrii       | luzprvyafopio   | fxswxsv@gmail.com         |
+| lphfg       | csdzgqinwouhpgo | rlgmobbfh@gmail.com       |
+| lzgkc       | hbkaokmhdxvujsd | frk@gmail.com             |
+| ndnkq       | uyshqlzuobcprh  | aonofrgjbljuzne@gmail.com |
+| npaer       | zpnmieofdcembp  | vbbxxrfgpyh@gmail.com     |
+| pbhtb       | ryjcl           | pcgtilxkwzw@gmail.com     |
+| qtquw       | plxtprkwuapikau | yolht@gmail.com           |
+| qvfws       | ntsvgkkui       | hxljynjebg@gmail.com      |
+| rfsms       | cnwyjmg         | qyl@gmail.com             |
+| rjcja       | wcrmj           | xvveantzy@gmail.com       |
+| rsksg       | uzym            | zwgextysb@gmail.com       |
+| sjbif       | teqyzsaln       | mpifmaal@gmail.com        |
+| tfsbd       | aotnzhhlqx      | rbiprwhjth@gmail.com      |
+| uipbh       | bfyzgwby        | ooqgby@gmail.com          |
+| uxhly       | zhypwsjzgwi     | xalacbdxx@gmail.com       |
+| uynpi       | myfprjkf        | hvpqmcgeivuzjer@gmail.com |
+| vbuvk       | yetufyrlfnfydxe | puq@gmail.com             |
+| vqzvd       | qofcvmnbmyulvbw | fcreqxfesv@gmail.com      |
+| vtzna       | sbyuqncnixcxj   | uuzfhmaa@gmail.com        |
+| wqhuv       | qnpwjgeray      | mehmijzjmeimt@gmail.com   |
+| xobuj       | xqmkseogf       | kusspsmv@gmail.com        |
+| zkjgi       | wfvszlpxmou     | vlyeandqyduwt@gmail.com   |
+| zqewx       | ziegqsp         | iuy@gmail.com             |
++-------------+-----------------+---------------------------+
+50 rows in set (0.05 sec)
+
+mysql> select * from customer ;[K[K[K[K[K[K[K[Kw[K[Kwarehouse ; 
++--------------+----------------+----------+
+| warehouse_id | warehouse_name | capacity |
++--------------+----------------+----------+
+| byjyb        | wfyfztp        |       32 |
+| htbuw        | yhkczww        |       17 |
+| izgaw        | hcuqrw         |       69 |
+| jppwh        | oryqoub        |       32 |
+| jtydd        | zpylcuk        |       67 |
+| ldbbg        | rdelzmm        |       28 |
+| moanq        | nzrlkm         |       88 |
+| pqciv        | vxoffa         |       87 |
+| spwal        | bguew          |       33 |
+| tzewx        | ganwfk         |       73 |
++--------------+----------------+----------+
+10 rows in set (0.05 sec)
+
+mysql> select * from warehouse ;[K[K[K[K[K[K[K[K[K[K[8G[Kselect * from customer ;[9Ghow tables ;[K[8Ginsert into warehouse values( 'htbuw' , 'yhkczww' , 17 ) ;
+ERROR 1062 (23000): Duplicate entry 'htbuw' for key 'PRIMARY'
+mysql> insert into warehouse values( 'htbuw' , 'yhkczww' , 17 ) ;[8Gselect * from warehouse ;[K[22Gcustomer ;[K[9Ghow tables ;[K[8Ginsert into warehouse values( 'htbuw' , 'yhkczww' , 17 ) ;[39Gldbbg' , 'rdelzmm' , 28 ) ;[39G[Pmoanq' , 'nzrlkm' , 8[65G[39Gpqciv' , 'vxoffa' , 87 ) ;[39Gizgaw' , 'hcuqrw' , 69 ) ;[39G[1@jtydd' , 'zpylcuk' , 67 ) ;[39Gbyjyb' , 'wfyfztp' , 32 ) ;[39G[2Pspwal' , 'bguew' , 33 ) ;^C^C^C^C^L^C^C^C
+
+^C
+mysql> inse r    se  showt      tables ; 
+show tables ; 
+^C
+mysql> show tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.09 sec)
+
+mysql> select * from [K[K[K[K from[K[K[K[Kfrom selller ; [K[K[K[Ker ; 
+Empty set (0.04 sec)
+
+mysql> customer[8G[Kgalimame[K[K[K[K[K[K[K[Kgalimane[K[K[K[K[K[K[K[Kgalimane[K[K[K[K[K[K[K[Kgalimane[K[K[K[K[K[K[K[Kgalimane galimae [K[Kn[Kane galimane [8G[Kgalimane galimane galimane galimane [8G[Kgalimane galimane galimane galimane galimane galimane galimaen [8G[Kgaliamewww[8G[K[H[2Jmysql> select * from seller ;
+Empty set (0.05 sec)
+
+mysql> se[K[Kshowt[K tabe[Kles ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> galimaen[K[8G[Kgaliamne galimmaen[8G[Kalimane[8G[Ksele[K[K[K[Kselect * [K[8G[Kselect * from [8G[Kselect * from orders ; 
+Empty set (0.04 sec)
+
+mysql> desc orders ; 
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| c_id         | varchar(50) | NO   | MUL | NULL    |       |
+| p_id         | varchar(50) | NO   | MUL | NULL    |       |
+| order_date   | date        | NO   |     | NULL    |       |
+| payment_mode | varchar(50) | YES  |     | NULL    |       |
+| status       | varchar(50) | NO   |     | NULL    |       |
+| order_id     | varchar(50) | NO   | PRI |         |       |
++--------------+-------------+------+-----+---------+-------+
+6 rows in set (0.04 sec)
+
+mysql> sele[K[K[K[Ksele[K[K[K[Kselect * from [K[K[K[K[Kc_id from cus[K[K[Kordrs [K[K[K[K[Kcustomer ; 
+ERROR 1054 (42S22): Unknown column 'c_id' in 'field list'
+mysql> sele[K[K[K[Kselect customer_id from customer ; 
++-------------+
+| customer_id |
++-------------+
+| aerlv       |
+| aomas       |
+| armno       |
+| aswpd       |
+| avtmx       |
+| bcmto       |
+| blylh       |
+| cgdyy       |
+| cqgaa       |
+| dfpwi       |
+| drarf       |
+| eipxp       |
+| ezdin       |
+| fabaa       |
+| giyim       |
+| gkdzu       |
+| gzpzr       |
+| haccy       |
+| hhdya       |
+| hrrfh       |
+| hzcga       |
+| iajgq       |
+| jpptl       |
+| jpxtq       |
+| jwzhd       |
+| kncvf       |
+| kpfhc       |
+| kvrii       |
+| lphfg       |
+| lzgkc       |
+| ndnkq       |
+| npaer       |
+| pbhtb       |
+| qtquw       |
+| qvfws       |
+| rfsms       |
+| rjcja       |
+| rsksg       |
+| sjbif       |
+| tfsbd       |
+| uipbh       |
+| uxhly       |
+| uynpi       |
+| vbuvk       |
+| vqzvd       |
+| vtzna       |
+| wqhuv       |
+| xobuj       |
+| zkjgi       |
+| zqewx       |
++-------------+
+50 rows in set (0.05 sec)
+
+mysql> 
+mysql> 
+mysql> delte [K[K[K[K[Kdelete from [8G[Kdelete from warou[Ke[K[Kehouse  ; 
+Query OK, 10 rows affected (0.07 sec)
+
+mysql> delte [K[K[K[K[Kssel[K[Kl[K[Kelect * from warhe[K[Kehouse ; 
+Empty set (0.04 sec)
+
+mysql> delte[K[K[Klete from customer ; 
+Query OK, 50 rows affected (0.05 sec)
+
+mysql> alter table [K[K[K[8G[Ks[Kselect * productrs ; [K[K[K[8G[Kdelete from products ; 
+ERROR 1146 (42S02): Table 'sql12283387.products' doesn't exist
+mysql> delete from products ;[K[K ; 
+Query OK, 40 rows affected (0.08 sec)
+
+mysql> sle[K[K[Kalter table table[K[K[K[K[Kwareou[K[Khouse[K[K[K[K[K[K[K[K[Kwareh[Khouse co[K[Kmodify colj[Kujn[K[Kmn c_id ( [K[K[K[K[K(c_id int[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcustomer_[K colun[K[K[K[Km[Km[K[Kmodify column  customer_[K_id[K[K[K[K[K[K[K[K[K[K[Kcustomer_id var[K[K[Kint[K[K[Kintgag[K[K[K[K[K[Kgal[K[K[K galimaen [K[K[K[K[K[K[K[Kgalimane[K[K[K[K[K[K[K[K  galimane[K[K[K[K[K[K[K[K ([K int not null  ; 
+ERROR 1025 (HY000): Error on rename of './sql12283387/#sql-490e_3125112' to './sql12283387/customer' (errno: 150)
+mysql> alter table customer modify column customer_id int not null  ;[63G[43G[36G[42G[54G int not[67G  ;[8G[Kdesc customer ; 
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| customer_id    | varchar(50) | NO   | PRI |         |       |
+| customer_name  | varchar(50) | NO   |     | NULL    |       |
+| customer_email | varchar(50) | NO   |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+mysql> desc customer ;[8Galter table customer modify column customer_id int not null  ;[43G[36G[42G [1@(c[55G int not[68G  ;)  ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(customer_id int not null)' at line 1
+mysql> alter table customer modify column (customer_id int not null)  ;[8Gdesc customer ;[K[8Galter table customer modify column customer_id int not null  ;[63G[1@(iint not null)  ;  ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(int not null)' at line 1
+mysql> alter table customer modify column customer_id (int not null)  ;[64Gnot[68G)  ;[K[Pi[43G[36Gc[42G[P [P [P [P [P [P [Pc[47G int not[60G  ;
+ERROR 1025 (HY000): Error on rename of './sql12283387/#sql-490e_3125112' to './sql12283387/customer' (errno: 150)
+mysql> alter table customer modify customer_id int not null  ;[56G[36G[47G [1@(iint not null  ;  ;[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[8G[Kalter talbe[K[K[K[K[K[8G[Ka[Kater [K[K[K[Kalter table alter coljumn [K[K[K[Ku[K[K[K[K[K[K[K[K[K customer alter column customer_id int notn [K null ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'int not null' at line 1
+mysql> alter table customer alter column customer_id int not null ; ;[K ;[K ;[K ;[K;[K ;[K ;[K ;[K;[K
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'int' at line 1
+mysql> alter table customer alter column customer_id int ;;[K[K[K[Knumber [K[K[K[K[K[Kinteger not null ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer not null' at line 1
+mysql> alter table customer alter column customer_id integer not null ;[K[K[K[K[K[K[K[K; [K ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer' at line 1
+mysql> alter table customer alter column customer_id integer ;[8G[Ka[Kalter table customer mofi[K[Kdify column customer_id integer ; 
+ERROR 1025 (HY000): Error on rename of './sql12283387/#sql-490e_3125112' to './sql12283387/customer' (errno: 150)
+mysql> drop [K[K[K[Kdrop constraint pk_[K[K[K[8G[Kdrop constraint [8G[Kdrop conta[Kraint pk_customer ; [K ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'contraint pk_customer' at line 1
+mysql> drop contraint pk_customer ;[23G[13G[8Gdrop[22G[34G ;[23G[13G[22G[34G ;[23G[13G[8G[1@ad[1@ld[1@td[1@ed[1@rd[1@ d[1@td[1@ad[1@bd[1@ld[1@ed[1@ d[Pd[1@ d[1@cd[1@ud[1@sd[1@td[1@od[1@md[1@ed[1@rd[1@ d
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pk_customer' at line 1
+mysql> alter table customer drop contraint pk_customer ;;r ;[H[2Jmysql> alter table customer drop contraint pk_customer ;^C^L  
+
+^C
+mysql> 
+mysql> 
+mysql> [H[2Jmysql> select COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_COLUMN_NAME, REFERENCED_TABLE_NAME
+    -> from information_schema.KEY_COLUMN_USAGE
+    -> where TABLE_NAME = '[K 'customer ;[K[K'[Kr' ; 
++-------------+-----------------+------------------------+-----------------------+
+| COLUMN_NAME | CONSTRAINT_NAME | REFERENCED_COLUMN_NAME | REFERENCED_TABLE_NAME |
++-------------+-----------------+------------------------+-----------------------+
+| customer_id | PRIMARY         | NULL                   | NULL                  |
++-------------+-----------------+------------------------+-----------------------+
+1 row in set (0.28 sec)
+
+mysql> select COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_COLUMN_NAME, REFERENCED_TABLE_NAME from information_schema.KEY_COLUMN_USAGE where TABLE_NAME =  'customer';[Awhere TABLE_NAME = 'customer' ;[K[150G '[K[A[39G[8G[Kdrop c[K[K[K[K[Kalter table customer drop colum[K[K[8G[Kfrom information_schema.KEY_COLUMN_USAGE[8G[Kalter table customer drop constraint primary ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraint primary' at line 1
+mysql> alter table customer drop constraint primary ;[K[K[K[K[K[K[K[KPRIMARY ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraint PRIMARY' at line 1
+mysql> alter table customer drop constraint PRIMARY ;[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KPRIMARY ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> alter table customer drop PRIMARY ;[K[K[K[K[K[K[K[K[K[K[K[K[K[8G[Kalter table customer drop constraint PRIMARY ;[45Gprimary ;[8Gselect COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_COLUMN_NAME, REFERENCED_TABLE_NAME from information_schema.KEY_COLUMN_USAGE where TABLE_NAME =  'customer';[Aalter table customer drop constraint primary ;[K[150G '[K[A[54Gw[8G[K[H[2Jmysql> insert into product values( 1 , 'rkcfze' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values( 2 , 'oxjsx' , 'non-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values( 3 , 'ixxazpg' , 'non-fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values( 4 , 'uivnuj' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values( 5 , 'myxdd' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values( 6 , 'ijkze' , 'non-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values( 7 , 'xklldp' , 'fragile' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into product values( 8 , 'kksmp' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values( 9 , 'umztkw' , 'non-fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into product values( 10 , 'xavfby' , 'fragile' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 1 , 'iewhnfz' , 96 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 2 , 'zjekule' , 80 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 3 , 'jdzsw' , 60 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into warehouse values( 4 , 'ycyzn' , 40 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 5 , 'dvpcz' , 65 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 6 , 'pqlojl' , 16 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into warehouse values( 7 , 'fhpelag' , 43 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 8 , 'sqvnki' , 52 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into warehouse values( 9 , 'utyrhqz' , 35 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into warehouse values( 10 , 'vjgvl' , 98 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from warhouse[K[K[K[K[Kehouse ; 
++--------------+----------------+----------+
+| warehouse_id | warehouse_name | capacity |
++--------------+----------------+----------+
+| 1            | iewhnfz        |       96 |
+| 10           | vjgvl          |       98 |
+| 2            | zjekule        |       80 |
+| 3            | jdzsw          |       60 |
+| 4            | ycyzn          |       40 |
+| 5            | dvpcz          |       65 |
+| 6            | pqlojl         |       16 |
+| 7            | fhpelag        |       43 |
+| 8            | sqvnki         |       52 |
+| 9            | utyrhqz        |       35 |
++--------------+----------------+----------+
+10 rows in set (0.05 sec)
+
+mysql> desc [K[K[K[Kdesc warehouse ; 
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| warehouse_id   | varchar(50) | NO   | PRI | NULL    |       |
+| warehouse_name | varchar(50) | NO   |     | NULL    |       |
+| capacity       | int(11)     | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.05 sec)
+
+mysql> insert into valu[K[K[K[Kwarehouse ([K( hell[K[K[K[Khelloi[K , hi , houw[K[Kwre) ; [K[K[K[K[K[K[K10) ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10)' at line 1
+mysql> insert into warehouse( hello , hi , 10) ;[44G[39G[31G[20G[29G[1@ ([1@v([1@a([1@l([1@u([1@e([1@s([1@ (
+ERROR 1054 (42S22): Unknown column 'hello' in 'field list'
+mysql> insert into warehouse values ( hello , hi , 10) ;[52G[47G[39Ghello[P [P [P [P [P [1@1 [1@0 
+ERROR 1054 (42S22): Unknown column 'hi' in 'field list'
+mysql> insert into warehouse values ( 10 , hi , 10) ;[49G[P [P [1@d [P [1@h [1@i  , 10) ;
+ERROR 1054 (42S22): Unknown column 'hi' in 'field list'
+mysql> insert into warehouse values ( 10 , hi , 10) ;[49G[44G[39G10[46Gi[1@' [1@'hhi' , 10) ;
+ERROR 1062 (23000): Duplicate entry '10' for key 'PRIMARY'
+mysql> insert into warehouse values ( 10 , 'hi' , 10) ;[51G[45G[39G( 10[P [1@1 [P [P [1@4 [1@8 
+Query OK, 1 row affected (0.05 sec)
+
+mysql> galiane[K[K[K[K[K[K[Kgaliae[K[K[K[K[K[Kselect * from warehouse ; 
++--------------+----------------+----------+
+| warehouse_id | warehouse_name | capacity |
++--------------+----------------+----------+
+| 1            | iewhnfz        |       96 |
+| 10           | vjgvl          |       98 |
+| 2            | zjekule        |       80 |
+| 3            | jdzsw          |       60 |
+| 4            | ycyzn          |       40 |
+| 48           | hi             |       10 |
+| 5            | dvpcz          |       65 |
+| 6            | pqlojl         |       16 |
+| 7            | fhpelag        |       43 |
+| 8            | sqvnki         |       52 |
+| 9            | utyrhqz        |       35 |
++--------------+----------------+----------+
+11 rows in set (0.05 sec)
+
+mysql> delete from[K[K[K[K from warehouse where warehouse_id=[K[K[K[K[8G[Kselect * from warehouse ;[8G[Kselect * from warehouse ;[8G[Kdelte fr[K[K[K[Kete from wra[K[Karehouse where warehouse-[K_name="[K'hi' ; 
+Query OK, 1 row affected (0.05 sec)
+
+mysql> delete from warehouse where warehouse_name='hi' ;[8Gselect * from warehouse ;[K
++--------------+----------------+----------+
+| warehouse_id | warehouse_name | capacity |
++--------------+----------------+----------+
+| 1            | iewhnfz        |       96 |
+| 10           | vjgvl          |       98 |
+| 2            | zjekule        |       80 |
+| 3            | jdzsw          |       60 |
+| 4            | ycyzn          |       40 |
+| 5            | dvpcz          |       65 |
+| 6            | pqlojl         |       16 |
+| 7            | fhpelag        |       43 |
+| 8            | sqvnki         |       52 |
+| 9            | utyrhqz        |       35 |
++--------------+----------------+----------+
+10 rows in set (0.04 sec)
+
+mysql> d[Kshowt [K tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> desc customer ; 
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| customer_id    | varchar(50) | NO   | PRI |         |       |
+| customer_name  | varchar(50) | NO   |     | NULL    |       |
+| customer_email | varchar(50) | NO   |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.05 sec)
+
+mysql> insert into warehouse values( 1 , 'hbsgn' , 'rCJC@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> insert into warehouse values( 2 , 'yfryxez' , 'Xqji@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '2' for key 'PRIMARY'
+mysql> insert into warehouse values( 3 , 'gcoqdsn' , 'bwMQZ@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '3' for key 'PRIMARY'
+mysql> insert into warehouse values( 4 , 'wliqjop' , 'YrlPU@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '4' for key 'PRIMARY'
+mysql> insert into warehouse values( 5 , 'rrihawt' , 'EgrRu@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '5' for key 'PRIMARY'
+mysql> insert into warehouse values( 6 , 'rviqu' , 'YpHIGE@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '6' for key 'PRIMARY'
+mysql> insert into warehouse values( 7 , 'qycvq' , 'kIZ@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '7' for key 'PRIMARY'
+mysql> insert into warehouse values( 8 , 'oggrkpv' , 'Uqrk@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '8' for key 'PRIMARY'
+mysql> insert into warehouse values( 9 , 'bguepp' , 'FWB@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '9' for key 'PRIMARY'
+mysql> insert into warehouse values( 10 , 'oluzts' , 'tGazxW@gmail.com' ) ;
+ERROR 1062 (23000): Duplicate entry '10' for key 'PRIMARY'
+mysql> insert into customer values( 1 , 'vjtpdkv' , 'MumnmU@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into customer values( 2 , 'cfvgr' , 'rvhQzC@gmail.com' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into customer values( 3 , 'uvzly' , 'Dbn@gmail.com' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into customer values( 4 , 'ibtroi' , 'fFB@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into customer values( 5 , 'ztcijuj' , 'EMeLl@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into customer values( 6 , 'qydhc' , 'QXJ@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into customer values( 7 , 'tkhfhpi' , 'BnG@gmail.com' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into customer values( 8 , 'usbfc' , 'vNiuN@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into customer values( 9 , 'qzoannx' , 'eOzzNZ@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into customer values( 10 , 'zuhvnah' , 'hdmITP@gmail.com' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> 
+mysql> 
+mysql> 
+mysql> [H[2Jmysql> des[K[Ksh[K[K[Kshow tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> select * from sells ; 
+Empty set (0.05 sec)
+
+mysql> desc seller ;[K[K[Ks ; 
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| s_id  | varchar(50) | NO   | PRI |         |       |
+| p_id  | varchar(50) | NO   | PRI |         |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.04 sec)
+
+mysql> se[K[Kse[K[Kdesc seller ; 
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| seller_id   | varchar(50) | NO   | PRI |         |       |
+| seller_name | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+2 rows in set (0.05 sec)
+
+mysql> [H[2Jmysql> insert into seller values( 1 , 'wfxke' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller values( 2 , 'oljvxv' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller values( 3 , 'qazikv' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller values( 4 , 'cmfythu' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into seller values( 5 , 'pfkxsww' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into seller values( 6 , 'hnfszdl' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller values( 7 , 'jmhqlcd' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into seller values( 8 , 'jnoac' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into seller values( 9 , 'nrsupcd' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller values( 10 , 'tmxcvxw' ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> 
+mysql> [H[2Jmysql> sele[K[K[K[Ks[Kshow tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> s[Kdesc sells ; 
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| s_id  | varchar(50) | NO   | PRI |         |       |
+| p_id  | varchar(50) | NO   | PRI |         |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.04 sec)
+
+mysql> desc sells ;[8Gshow tables ;[8Gdesc sells ;[K
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| s_id  | varchar(50) | NO   | PRI |         |       |
+| p_id  | varchar(50) | NO   | PRI |         |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.05 sec)
+
+mysql> desc sells ;[8Gshow tables ;[8Ginsert into seller values( 10 , 'tmxcvxw' ) ;[8Gshow tables ;[K[8Gdesc sells ;[K[8G[Kdesc sells ;[8G[Kseeld[K[K[Klect * from product ; 
++------------+--------------+--------------+
+| product_id | product_name | product_type |
++------------+--------------+--------------+
+| 1          | rkcfze       | fragile      |
+| 10         | xavfby       | fragile      |
+| 2          | oxjsx        | non-fragile  |
+| 3          | ixxazpg      | non-fragile  |
+| 4          | uivnuj       | fragile      |
+| 5          | myxdd        | fragile      |
+| 6          | ijkze        | non-fragile  |
+| 7          | xklldp       | fragile      |
+| 8          | kksmp        | fragile      |
+| 9          | umztkw       | non-fragile  |
++------------+--------------+--------------+
+10 rows in set (0.04 sec)
+
+mysql> insert into sells values( 1 , 8 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 2 , 9 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 3 , 7 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 4 , 10 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 5 , 10 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into sells values( 6 , 5 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 7 , 7 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 8 , 1 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into sells values( 9 , 5 ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into sells values( 10 , 2 ) ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> [H[2Jmysql> desc [K[K[K[Kshow tables ; 
++-----------------------+
+| Tables_in_sql12283387 |
++-----------------------+
+| customer              |
+| orders                |
+| product               |
+| seller                |
+| seller_brands         |
+| sells                 |
+| stored_in             |
+| subscribes_for        |
+| warehouse             |
++-----------------------+
+9 rows in set (0.05 sec)
+
+mysql> s[Kdesc stored_id ; [K[Kn ; 
++------------+---------------+------+-----+---------+-------+
+| Field      | Type          | Null | Key | Default | Extra |
++------------+---------------+------+-----+---------+-------+
+| p_id       | varchar(50)   | NO   | PRI |         |       |
+| w_id       | varchar(50)   | NO   | PRI |         |       |
+| cost       | decimal(10,2) | YES  |     | NULL    |       |
+| start_date | date          | YES  |     | NULL    |       |
++------------+---------------+------+-----+---------+-------+
+4 rows in set (0.05 sec)
+
+mysql> se[K[Kseller[K[K[K[K[K[Ksell[K[K[Ks[K[Ksell[K[K[K[Kshow [K[K[K[Kdesc seller_brands
+    -> ;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| seller_id | varchar(50) | NO   | PRI | NULL    |       |
+| brand     | varchar(50) | NO   |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.04 sec)
+
+mysql> insert into seller_brands values( 1 , 'WYJRT' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 2 , 'GVDA' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 3 , 'RQXK' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 4 , 'GZVG' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 5 , 'CNB' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 6 , 'VDTUV' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 7 , 'WEPPL' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 8 , 'OFMAQ' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 9 , 'AQT' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 10 , 'TQMXV' ) ;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into seller_brands values( 1 , 'WKTS' ) ;
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> insert into seller_brands values( 2 , 'RQQYE' ) ;
+ERROR 1062 (23000): Duplicate entry '2' for key 'PRIMARY'
+mysql> insert into seller_brands values( 3 , 'QIN' ) ;
+ERROR 1062 (23000): Duplicate entry '3' for key 'PRIMARY'
+mysql> insert into seller_brands values( 4 , 'SFTOT' ) ;
+ERROR 1062 (23000): Duplicate entry '4' for key 'PRIMARY'
+mysql> insert into seller_brands values( 5 , 'BQQ' ) ;
+ERROR 1062 (23000): Duplicate entry '5' for key 'PRIMARY'
+mysql> insert into seller_brands values( 6 , 'GWI' ) ;
+ERROR 1062 (23000): Duplicate entry '6' for key 'PRIMARY'
+mysql> insert into seller_brands values( 7 , 'PNDOL' ) ;
+ERROR 1062 (23000): Duplicate entry '7' for key 'PRIMARY'
+mysql> insert into seller_brands values( 8 , 'EKWBD' ) ;
+ERROR 1062 (23000): Duplicate entry '8' for key 'PRIMARY'
+mysql> insert into seller_brands values( 9 , 'VDJ' ) ;
+ERROR 1062 (23000): Duplicate entry '9' for key 'PRIMARY'
+mysql> insert into seller_brands values( 10 , 'UAME' ) ;
+ERROR 1062 (23000): Duplicate entry '10' for key 'PRIMARY'
+mysql> alter[K[K[K[K[Kalter table add[K[K[K[K[K[K[K[K[K[K[K[K[Kalter [K[K[K[K[Kaltert[K ab[K[K[K[K[K[K[Kalter[K[K[K[K[K[H[2Jmysql> alter table add con[K[K[K[K[K[Kcustomer[8G[Kinsert into seller_brands values( 10 , 'UAME' ) ;ww[8G[Kalter table seller_bracds[K[K[Knds add ons[K[K[Kconstraint pk_seller[K[K[K[K[K[Kseller_brands( peim[K[K[K[K[K pe[Krimary key ( s[Kseller_id , bra[K[K[K[K,brand) ; 
+ERROR 1068 (42000): Multiple primary key defined
+mysql> drop [K[K[K[Kdrop [K[K[K[Kalter table seller_brands drop p[Kpri[K[K[Kpk_seller_brands ; 
+ERROR 1091 (42000): Can't DROP 'pk_seller_brands'; check that column/key exists
+mysql> alter table seller_brands drop pk_seller_brands ;[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krop constraint primary ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraint primary' at line 1
+mysql> alter table seller_brands drop constraint primary ;[K[Kykey ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraint primarykey' at line 1
+mysql> alter table seller_brands drop constraint primarykey ;[K[K[K[K key ; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraint primary key' at line 1
+mysql> alter table seller_brands drop constraint primary key ;[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdrop cons[K[8G[Kpalter table seller_brands drop constraint primarykey ;[57G ;[K[39Gpk_seller_brands ;[K[34Gadd constraint pk_seller_brands primary key ( seller_id ,brand) ;[8Ginsert into seller_brands values( 10 , 'UAME' ) ;[K[42G[2P9 , 'VDJ[55G[42G[2@8 , 'EKWBD[57G[42G7 , 'PNDOL[57G[42G[2P6 , 'GWI[55G[42G5 , 'BQQ[55G[42G[2@4 , 'SFTOT[57G[42G[2P3 , 'QIN[55G[42G[2@2 , 'RQQYE[57G[42G[P1 , 'WKTS[56G[43G[1@0 , '[1@TQMXV[58G[42G[3P9 , 'AQT[55G[42G[2@8 , 'OFMAQ[57G[42G7 , 'WEPPL[57G[42G6 , 'VDTUV[57G[42G[2P5 , 'CNB[55G[42G[1@4 , 'GZVG[56G[42G3 , 'RQXK[56G[42G2 , 'GVDA[56G[42G[1@1 , 'WYJRT[57G[8G;[Kdesc seller_brands[14Gtored_in ;[K[8Gshow tables ;[K[8Ginsert into sells values( 10 , 2 ) ;[34G[P9 , 5 ) ;[34G8 , 1 ) ;[34G7 , 7 ) ;[34G6 , 5 ) ;p[34G5 , 10 ) ;[34G4[44G[34G[P3 , 7 ) ;[34G2 , 9 ) ;[34G1 , 8 ) ;[8Gselect * from product ;[K[8Gdesc sells ;[K[8Gshow tables ;[8Ginsert into seller values( 10 , 'tmxcvxw' ) ;[35G[P9 , 'nrsupcd[52G[35G[2P8 , 'jnoac[50G[35G[2@7 , 'jmhqlcd[52G[35G6 , 'hnfszdl[52G[35G5 , 'pfkxsww[52G[35G4 , 'cmfythu[52G[35G[P3 , 'qazikv[51G[35G2 , 'oljvx[51G[35G[P1 , 'wfxke[50G[8Gdesc seller ;[Ks ;[K[8G[9@select * from[29G[9Ghow tables ;[K[8Ginsert into customer values( 10 , 'zuhvnah' , 'hdmITP@gmail.com' ) ;[37G[P9 , 'qzoannx' , 'eOzzNZ[75G[37G[3P8 , 'usbfc' , 'vNiuN[72G[37G7 , 'tkhfhpi' , 'BnG[72G[37G[2P6 , 'qydhc' , 'QXJ[70G[37G[4@5 , 'ztcijuj' , 'EMeLl[74G[37G[3P4 , 'ibtroi' , 'fFB[71G[37G[P3 , 'uvzly' , 'Dbn[70G[37G[3@2 , 'cfvgr' , 'rvhQzC[73G[37G[2@1 , 'vjtpdkv' , 'MumnmU[75G[20G[1@warehouse values( 10 , 'oluzts' , 'tGazxW[76G[38G[4P9 , 'bguepp' , 'FWB[72G[38G[2@8 , 'oggrkpv' , 'Uqrk[74G[38G[3P7 , 'qycvq' , 'kIZ[71G[38G[3@6 , 'rviqu' , 'YpHIGE[74G[38G[1@5 , 'rrihawt' , 'EgrRu[75G[38G4 , 'wliqjop' , 'YrlPU[75G[38G3 , 'gcoqdsn' , 'bwMQZ[75G[38G[P2 , 'yfryxez' , 'Xqji[74G[38G[2P1 , 'hbsgn' , 'rCJC[72G[8Gdesc customer ;[K[8Gshow tables ;[K[9Gelect * from warehouse ;[8Gdelete from warehouse where warehouse_name='hi' ;[8Gselect * from warehouse ;[K[8Ginsert into warehouse values ( 48 , 'hi' , 10) ;[39G10[56G[44G[2Phi[54G[39G[3@hello[57G[29G[8P([49G[8Gdesc warehouse ;[K[8G[9@select * from[33G[8Ginsert into warehouse values( 10 , 'vjgvl' , 98 ) ;[38G[1@9 , 'utyrhqz' , 35 ) ;[38G[P8 , 'sqvnki' , 52 ) ;[38G[1@7 , 'fhpelag' , 43 ) ;[38G[P6 , 'pqlojl' , 16 ) ;[38G[P5 , 'dvpcz' , 65 ) ;[38G4 , 'ycyzn' , 40 ) ;[38G3 , 'jdzsw' , 6[58G[38G[2@2 , 'zjekule' , 8[60G[38G1 , 'iewhnfz' , 96 ) ;[20G[5@product values( 10 , 'xavfby' , 'fragile' ) ;[36G[3@9 , 'umztkw' , 'non-[68G[36G[5P8 , 'kksmp' , '[63G[36G[1@7 , 'xklld[64G[36G[3@6 , 'ijkze' , 'non-[67G[36G[4P5 , 'myxdd' , '[63G[36G[1@4 , 'uivnuj[64G[36G[5@3 , 'ixxazpg' , 'non-[69G[36G[2P2 , 'oxjsx[67G[36G[3P1 , 'rkcfze' , '[64G[8Galter table customer drop PRIMARY ;[K[34G[11@constraint P[54G[45Gprimary ;[8Gselect COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_COLUMN_NAME, REFERENCED_TABLE_NAME from information_schema.KEY_COLUMN_USAGE where TABLE_NAME =  'customer';[Awhere TABLE_NAME = 'customer' ;[K[150G '[K[A[39G[8Gfrom information_schema.KEY_COLUMN_USAGE[8Gselect COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_COLUMN_NAME, REFERENCED_TABLE_NAME[8Galter table customer drop contraint pk_customer ;[K[8G[21Pd[36G[8G[28@alter table customer modify column customer_id integer ;[29G[Palter[63Gnot null ;[57G ;[Knot null ;[29Gmodify customer_id int not null  ;[K[37G[7@olumn c[55G(int not null)  ;[43G[1@([56G[P[72G[8Gdesc customer ;[K[8Galter table customer modify column customer_id int n
