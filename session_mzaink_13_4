@@ -1,0 +1,250 @@
+Script started on 2019-04-13 20:41:12+0530
+]0;black-knight@napolean: ~/Dev/collab/commerce-on-line[01;32mblack-knight@napolean[00m:[01;34m~/Dev/collab/commerce-on-line[00m$ [H[2J]0;black-knight@napolean: ~/Dev/collab/commerce-on-line[01;32mblack-knight@napolean[00m:[01;34m~/Dev/collab/commerce-on-line[00m$ mysqlc
+mysqlcheck    mysqlconnect  
+]0;black-knight@napolean: ~/Dev/collab/commerce-on-line[01;32mblack-knight@napolean[00m:[01;34m~/Dev/collab/commerce-on-line[00m$ mysqlconnect [H[2J]0;black-knight@napolean: ~/Dev/collab/commerce-on-line[01;32mblack-knight@napolean[00m:[01;34m~/Dev/collab/commerce-on-line[00m$ mysqlconnect 
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16211287
+Server version: 8.0.13-4 Percona Server (GPL), Release '4', Revision 'f0a32b8'
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show[H[2Jmysql> show tables;
++----------------------+
+| Tables_in_coXhd96RYz |
++----------------------+
+| customer             |
+| orders               |
+| product              |
+| seller               |
+| seller_brands        |
+| sells                |
+| stored_in            |
+| subscribes_for       |
+| warehouse            |
++----------------------+
+9 rows in set (0.14 sec)
+
+mysql> [H[2Jmysql> sleec[K[K[K[Kle[K[Kelect custme[K[K[K[Kstomer_id, customer_namename from [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksle[K[K[Ksele[K[K[K[K[H[2Jmysql> [H[2Jmysql> create or replace procedure spDisplayAllOrders2019
+    -> as
+    -> begin
+    ->     select * 
+    ->     from orders
+    ->     where year(order_date) = '2019';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'procedure spDisplayAllOrders2019
+as
+begin
+    select * 
+    from orders
+    wher' at line 1
+mysql> [H[2Jmysql> create or replace procedure spDisplayAllOrders2019
+    -> as
+    -> begin
+    ->     select * 
+    ->     from orders
+    ->     where year(order_date) = '2019';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'procedure spDisplayAllOrders2019
+as
+begin
+    select * 
+    from orders
+    wher' at line 1
+mysql> end;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'end' at line 1
+mysql> /[Kcreate or replace procedure spDisplayAllOrders2019
+    -> as
+    -> begin
+    ->     select * 
+    ->     from orders
+    ->     where year(order_date) = '2019';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'procedure spDisplayAllOrders2019
+as
+begin
+    select * 
+    from orders
+    wher' at line 1
+mysql> end;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'end' at line 1
+mysql> /[H[2Jmysql> /[Kselect * 
+    ->     from orders
+    ->     where year(order_date) = '2019';
+Empty set (0.15 sec)
+
+mysql> select * from orders;
++------+------+----------+------------+--------------+----------------+
+| c_id | p_id | order_no | order_date | payment_mode | order_status   |
++------+------+----------+------------+--------------+----------------+
+| 1    | 13   | 20       | 2006-07-09 | card         | arriving today |
+| 14   | 12   | 27       | 2004-12-13 | card         | cancelled      |
+| 14   | 6    | 26       | 2013-09-25 | card         | in-transit     |
+| 17   | 1    | 12       | 2011-11-16 | net banking  | arriving today |
+| 21   | 7    | 4        | 2012-03-18 | net banking  | arriving today |
+| 26   | 2    | 1        | 2013-06-06 | net banking  | arriving today |
+| 3    | 13   | 3        | 2008-01-27 | card         | in-transit     |
+| 4    | 9    | 13       | 2003-06-10 | card         | in-transit     |
+| 5    | 6    | 17       | 2005-01-15 | net banking  | arriving today |
+| 6    | 14   | 27       | 2006-07-05 | net banking  | cancelled      |
+| 6    | 7    | 9        | 2018-12-09 | cash         | in-transit     |
++------+------+----------+------------+--------------+----------------+
+11 rows in set (0.17 sec)
+
+mysql> [H[2Jmysql> select * from orders;[17G[5@     [33G     where year(order_date) = '2019';';[K8';
++------+------+----------+------------+--------------+--------------+
+| c_id | p_id | order_no | order_date | payment_mode | order_status |
++------+------+----------+------------+--------------+--------------+
+| 6    | 7    | 9        | 2018-12-09 | cash         | in-transit   |
++------+------+----------+------------+--------------+--------------+
+1 row in set (0.24 sec)
+
+mysql> inswert [K[K[K[Kert[K[K[K[K[K[Kinsert into orders values( 1 , 17 , 15 '2019-13-26' , 'cash' , 'arriving today' );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2019-13-26' , 'cash' , 'arriving today' )' at line 1
+mysql> desc orders;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| c_id         | varchar(50) | NO   | PRI | NULL    |       |
+| p_id         | varchar(50) | NO   | PRI | NULL    |       |
+| order_no     | varchar(50) | YES  |     | NULL    |       |
+| order_date   | date        | YES  |     | NULL    |       |
+| payment_mode | varchar(50) | YES  |     | NULL    |       |
+| order_status | varchar(50) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+6 rows in set (0.14 sec)
+
+mysql> desc orders;[8Ginsert into orders values( 1 , 17 , 15 '2019-13-26' , 'cash' , 'arriving today' );5[P  [1@5 [1@, 
+ERROR 1292 (22007): Incorrect date value: '2019-13-26' for column 'order_date' at row 1
+mysql> [H[2Jmysql> insert into orders values( 1 , 17 , 15, '2019-13-26' , 'cash' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-13-26' for column 'order_date' at row 1
+mysql> insert into orders values( 1 , 17 , 15, '2019-13-26' , 'cash' , 'arriving today' );13[P-[1@2-
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 1 , 9 , 6 , '2019-13-26' , 'net banking' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-13-26' for column 'order_date' at row 1
+mysql> insert into orders values( 3 , 17 , 10 , '2009-14-06' , 'net banking' , 'cancelled' );
+ERROR 1292 (22007): Incorrect date value: '2009-14-06' for column 'order_date' at row 1
+mysql> insert into orders values( 13 , 3 , 21 , '2019-08-09' , 'card' , 'arriving today' );
+Query OK, 1 row affected (0.20 sec)
+
+mysql> insert into orders values( 3 , 30 , 26 , '2019-04-13' , 'card' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 27 , 2 , 26 , '2019-14-20' , 'cash' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-14-20' for column 'order_date' at row 1
+mysql> insert into orders values( 30 , 17 , 8 , '2019-08-01' , 'cash' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 20 , 29 , 17 , '2009-03-29' , 'net banking' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 21 , 2 , 30 , '2009-06-05' , 'cash' , 'in-transit' );
+Query OK, 1 row affected (0.20 sec)
+
+mysql> insert into orders values( 29 , 16 , 16 , '2019-16-16' , 'cash' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-16-16' for column 'order_date' at row 1
+mysql> insert into orders values( 9 , 10 , 3 , '2019-18-03' , 'card' , 'in-transit' );
+ERROR 1292 (22007): Incorrect date value: '2019-18-03' for column 'order_date' at row 1
+mysql> [H[2Jmysql> select * from orders whre[K[Kh[Kere year(d[Korder_date)  = '2019';
++------+------+----------+------------+--------------+----------------+
+| c_id | p_id | order_no | order_date | payment_mode | order_status   |
++------+------+----------+------------+--------------+----------------+
+| 13   | 3    | 21       | 2019-08-09 | card         | arriving today |
++------+------+----------+------------+--------------+----------------+
+1 row in set (0.14 sec)
+
+mysql> insert into orders values( 1 , 9 , 6 , '2019-13-26' , 'net banking' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-13-26' for column 'order_date' at row 1
+mysql> insert into orders values( 3 , 17 , 10 , '2009-14-06' , 'net banking' , 'cancelled' );
+ERROR 1292 (22007): Incorrect date value: '2009-14-06' for column 'order_date' at row 1
+mysql> insert into orders values( 13 , 3 , 21 , '2019-08-09' , 'card' , 'arriving today' );
+ERROR 1062 (23000): Duplicate entry '13-3' for key 'PRIMARY'
+mysql> insert into orders values( 3 , 30 , 26 , '2019-04-13' , 'card' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 27 , 2 , 26 , '2019-14-20' , 'cash' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-14-20' for column 'order_date' at row 1
+mysql> insert into orders values( 30 , 17 , 8 , '2019-08-01' , 'cash' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 20 , 29 , 17 , '2009-03-29' , 'net banking' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 21 , 2 , 30 , '2009-06-05' , 'cash' , 'in-transit' );
+ERROR 1062 (23000): Duplicate entry '21-2' for key 'PRIMARY'
+mysql> insert into orders values( 29 , 16 , 16 , '2019-16-16' , 'cash' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-16-16' for column 'order_date' at row 1
+mysql> insert into orders values( 9 , 10 , 3 , '2019-18-03' , 'card' , 'in-transit' );
+ERROR 1292 (22007): Incorrect date value: '2019-18-03' for column 'order_date' at row 1
+mysql> [H[2Jmysql> insert into orders values( 1 , 12 , 7 , '2019-10-25' , 'net banking' , 'cancelled' );
+Query OK, 1 row affected (0.23 sec)
+
+mysql> insert into orders values( 4 , 28 , 6 , '2009-17-03' , 'net banking' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2009-17-03' for column 'order_date' at row 1
+mysql> insert into orders values( 1 , 14 , 14 , '2019-13-04' , 'card' , 'cancelled' );
+ERROR 1292 (22007): Incorrect date value: '2019-13-04' for column 'order_date' at row 1
+mysql> insert into orders values( 15 , 13 , 11 , '2019-17-18' , 'net banking' , 'arriving today' );
+ERROR 1292 (22007): Incorrect date value: '2019-17-18' for column 'order_date' at row 1
+mysql> insert into orders values( 3 , 18 , 16 , '2019-11-21' , 'cash' , 'cancelled' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 1 , 23 , 28 , '2009-01-20' , 'card' , 'arriving today' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 13 , 6 , 4 , '2019-03-01' , 'card' , 'cancelled' );
+Query OK, 1 row affected (0.21 sec)
+
+mysql> insert into orders values( 23 , 27 , 23 , '2019-10-20' , 'card' , 'arriving today' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 15 , 21 , 26 , '2009-03-23' , 'card' , 'arriving today' );
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+mysql> insert into orders values( 4 , 15 , 28 , '2019-03-02' , 'cash' , 'cancelled' );[H[2Jmysql> insert into orders values( 4 , 15 , 28 , '2019-03-02' , 'cash' , 'cancelled' );[35G[4P[41G[10@1 , 26 , '2009-03-23' , 'card' , 'arriving today' );[35G23 , 27 , 23 , '2019-10-20[93G[35G15 , 21 , 26 , '2009-03-23[93G[35G23 , 27 , 23 , '2019-10-20[93G[35G[7P13 , 6 , 4 , '2019-03-01' , 'card' , 'cancelled' );[36G[4@ , 23 , [2@28 , '2009-01-20' , 'card' , 'arriving today' );[35G[5P3 , 18 , 16 , '2019-11-21' , 'cash' , 'cancelled' );[35G[6@15 , 1[46G[7@1 , '2019-17-18' , 'net banking' , 'arriving today' );[36G[P , 1[12P4 , 14 , '2019-13-04' , 'card' , 'cancelled' );[35G[5P4 , [16@28 , 6 , '2009-17-03' , 'net banking' , 'arriving today' );[35G[5P1 , 12 , 7 , '2019-10-25' , 'net banking' , 'cancelled' );[35G[6P9 , 10 , 3 , '2019-18-03' , 'card' , 'in-transit' );[35G[1@2[41G[5@6 , 16 , '2019-16-16' , 'cash' , 'arriving today' );[36G[5P1 , 2 , 30 , '2009-06-05' , 'cash' , 'in-transit' );[36G[7@0 , 29 , 17 , '2009-03-29' , 'net banking' , 'cancelled' );[35G[8P30 , 17 , 8 , '2019-08-01' , 'cash[87G[35G[5@27 , 2 , 26 , '2019-14-20' , 'cash' , 'arriving today' );[35G[5P3 , 30 , 26 , '2019-04-13' , 'card' , 'cancelled' );[35G[1@1[41G[4@ , 21 , '2019-08-09' , 'card' , 'arriving today' );[35G[P3 , [3@17 , 10 , '2009-14-06' , 'net banking' , 'cancelled' );[35G[3@1 , 9 , 6 , '2019-13-26' , 'net banking' , 'arriving today' );[8Gselect * from orders where year(order_date) = '2019';[K[8Ginsert into orders values( 9 , 10 , 3 , '2019-18-03' , 'card' , 'in-transit' );[8Gselect * from orders where year(order_date) = '2019';[K
++------+------+----------+------------+--------------+----------------+
+| c_id | p_id | order_no | order_date | payment_mode | order_status   |
++------+------+----------+------------+--------------+----------------+
+| 1    | 12   | 7        | 2019-10-25 | net banking  | cancelled      |
+| 13   | 3    | 21       | 2019-08-09 | card         | arriving today |
+| 13   | 6    | 4        | 2019-03-01 | card         | cancelled      |
++------+------+----------+------------+--------------+----------------+
+3 rows in set (0.19 sec)
+
+mysql> delimiter $$
+mysql> create or replace procedure spDisplayAllOrders2019
+    -> as
+    -> begin
+    ->     select * 
+    ->     from orders
+    ->     where year(order_date) = '2019';
+    -> end$$
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'procedure spDisplayAllOrders2019
+as
+begin
+    select * 
+    from orders
+    wher' at line 1
+mysql> delimiter;
+    -> '
+    '> '
+    -> ;
+    -> ;fd
+    -> ^^X^X^C^L
+[H[2J    -> 
+^C
+mysql> [H[2Jmysql> delete[K[K[Kimite[K[K[K[K[K[K[K[Kdelimiter $$
+mysql> create procedure spDisplayAllOrders2019
+    -> begin
+    ->     select * 
+    ->     from orders
+    ->     where year(order_date) = '2019';
+    -> end$$
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'begin
+    select * 
+    from orders
+    where year(order_date) = '2019';
+end' at line 2
+mysql> delimiter;
+    -> ;[K
+    -> ;
+    -> '
+    '> ^^M^X
+
+^C
+mysql> [H[2Jmysql> ';delimiter;[8Gcreate procedure spDisplayAllOrders2019 begin     select *      from orders     where year(order_date) = '2019'; end$$[8G[113Pend$$[8G    where year(order_date) = '2019';[12Gfrom orders[K[12Gselect *
