@@ -1,10 +1,9 @@
--- 10.Write a procedure to display the list of all orders done in 2019
-delimiter
-//
-create procedure spDisplayAllOrders2019(localyear int)
+-- 10.Write a procedure to display the list of all orders done in a year
+delimiter //
+create procedure spDisplayAllOrders(localyear int)
 begin
     select
-        payment_mode
+        order_no, order_date , c_id , payment_mode
     from
         orders
     where
@@ -17,8 +16,8 @@ delimiter ;
 delimiter //
 create procedure spDisplayAllCustomers()
 begin
-    select c.*
-    from customers as c, orders as o
+    select c.customer_id , c.customer_name , c.customer_email
+    from customer as c, orders as o
     where o.c_id = c.customer_id;
 end
 //
